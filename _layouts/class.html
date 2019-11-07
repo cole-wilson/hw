@@ -1,16 +1,11 @@
 ---
 layout: main
 ---
-<h2>Current Homework: </h2> {{ page.homework }}
+<h2>Current Homework: </h2> {{ page.homework }}Homework incorrect or missing?<form action='http://jmshw.rf.gd/' method='post'>
+  <input name='c' type=text value='jams'>
+  <input value='Update' type=submit>
+</form>
 
-<script>
-var xhr = new XMLHttpRequest();
-xhr.open("POST", "https://jmshw.rf.gd", true);
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.send(JSON.stringify({
-    'c': 'jams'
-}));
-</script>
 
 
 <!---
