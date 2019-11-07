@@ -1,8 +1,11 @@
 ---
 layout: main
 ---
-<h2>Current Homework: </h2> {{ page.homework }}Homework incorrect or missing?<form action='http://jmshw.rf.gd/' method='post'>
-  <input name='c' type=text value='jams'>
+<h2>Current Homework: </h2> {{ page.homework }}<br><strong>Homework incorrect or missing?</strong> Update it here.<br>
+
+<form action='http://jmshw.rf.gd/' method='post'>
+  <input type=hidden name='c' value='{{page.url}}'>
+  <input type=text name='h' placeholder='pg. 107 #6-9'>
   <input value='Update' type=submit>
 </form>
 
