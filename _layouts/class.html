@@ -1,23 +1,7 @@
 ---
 layout: main
 ---
-<h2>Current Homework: </h2> {{ page.homework }}<br><strong>Homework incorrect or missing?</strong> Update it here.<br>
-
-<p id="demo"></p>
-
-<script>
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    var date = getDate();
-    document.getElementById("demo").innerHTML = myObj["\{{page.url}}"];
-  }
-};
-xmlhttp.open("GET", "http://jmshw.rf.gd/data.json", true);
-xmlhttp.send();
-
-</script>
+<h2>Current Homework: </h2><embed src='http://jmshw.rf.gd/d/index'></embed><br>
 
 <form action='http://jmshw.rf.gd/' method='post'>
   <input type=hidden name='c' value='{{page.title}}'>
