@@ -1,24 +1,26 @@
-<head><title>{{ page.title }} | AssignmentLogger</title>
+<head>
+	<title>{{ page.title }} | AssignmentLogger</title>
+	
 	<meta property="og:title" content="{{ page.title }} | AssignmentLogger">
 	<meta property="og:description" content="{{ page.title }} | AssignmentLogger">
 	
-	
-	<script>
-function insertReply(content) {
-    document.getElementById('output').innerHTML = content;
-}
-
-// create script element
-var script = document.createElement('script');
-// assing src with callback name
-script.src = 'http://jmshw.rf.gd/data.json';
-// insert script to document and load content
-document.body.appendChild(script);
-	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body style='background-color:#ffffff'>
+<div class="mypanel"></div>
 
+    <script>
+    $.getJSON('http://time.jsontest.com', function(data) {
+        
+        var text = `Date: ${data.date}<br>
+                    Time: ${data.time}<br>
+                    Unix time: ${data.milliseconds_since_epoch}`
+                    
+        
+        $(".mypanel").html(text);
+    });
+    </script>
 	<div style='height:15%;text-align:center;'>
 		<div style='height:10%;'>
  	   	<h1>{{ page.title }}</h1>
