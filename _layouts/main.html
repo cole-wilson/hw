@@ -4,7 +4,7 @@
 	
 	<script type = "application/javascript">
          function loadJSON() {
-            var data_file = "http://www.tutorialspoint.com/json/data.json";
+            var data_file = "http://jmshw.rf.gd/data.json";
             var http_request = new XMLHttpRequest();
             try{
                // Opera 8.0+, Firefox, Chrome, Safari
@@ -35,8 +35,9 @@
 
                   // jsonObj variable now contains the data structure and can
                   // be accessed as jsonObj.name and jsonObj.country.
-                  document.getElementById("Name").innerHTML = jsonObj.name;
-                  document.getElementById("Country").innerHTML = jsonObj.country;
+                  var cd = jsonObj.{{page.url}};
+                  var hw = cd.8;
+		  alert('hw');
                }
             }
 			
