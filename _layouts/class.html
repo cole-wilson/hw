@@ -11,7 +11,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myObj = JSON.parse(this.responseText);
     var date = getDate();
-    document.getElementById("demo").innerHTML = myObj["\{{page.url}}"][date];
+    document.getElementById("demo").innerHTML = myObj["\{{page.url}}"];
   }
 };
 xmlhttp.open("GET", "http://jmshw.rf.gd/data.json", true);
