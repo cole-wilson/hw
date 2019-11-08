@@ -5,24 +5,10 @@
 	
 	<script>
 		<script type="text/javascript">
-			// jQuery cross domain ajax
-			$.get("http://www.example.org/ajax.php").done(function (data) {
-			    console.log(data);
-			});
-
-			// using XMLHttpRequest
-			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "http://jmshw.rf.gd/data.json", true);
-			xhr.onload = function () {
-	        	    alert(xhr.responseText);
-			};
-			xhr.send();
-
-			// using the Fetch API
 			fetch("http://jmshw.rf.gd/data.json").then(function (response) {
   			return response.json();
 			}).then(function (json) {
- 			   alert(json);
+ 			   alert(json[1]);
 			});
 		</script>
 	</script>
