@@ -4,25 +4,16 @@
 	
 	
 	<script>
-		<script type="text/javascript">
-			// jQuery cross domain ajax
-			$.get("http://www.example.org/ajax.php").done(function (data) {
-			    console.log(data);
-			});
-			// using XMLHttpRequest
-			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "http://jmshw.rf.gd/data.json", true);
-			xhr.onload = function () {
-	        	    alert(xhr.responseText);
-			};
-			xhr.send();
-			// using the Fetch API
-			fetch("http://jmshw.rf.gd/data.json").then(function (response) {
-  			return response.json();
-			}).then(function (json) {
- 			   //alert(json);
-			});
-		</script>
+function insertReply(content) {
+    document.getElementById('output').innerHTML = content;
+}
+
+// create script element
+var script = document.createElement('script');
+// assing src with callback name
+script.src = 'http://url.to.json?callback=insertReply';
+// insert script to document and load content
+document.body.appendChild(script);
 	</script>
 </head>
 
