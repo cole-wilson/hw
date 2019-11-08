@@ -13,9 +13,8 @@
     <script>
     $.getJSON('http://time.jsontest.com', function(data) {
         
-        var text = `Date: ${data.date}<br>
-                    Time: ${data.time}<br>
-                    Unix time: ${data.milliseconds_since_epoch}`
+	var a = '${data.{{ page.url }} }'
+        var text = `a.8`
                     
         
         $(".mypanel").html(text);
