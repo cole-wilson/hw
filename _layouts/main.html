@@ -13,8 +13,8 @@
     <script>
     $.getJSON('http://time.jsontest.com', function(data) {
         
-	var a = `{{ page.url }}`
-        var text = `${data.${a}.8}`
+	var a = `{{ page.title }}`
+        var text = `${data.JAMS.8}`
                     
         
         $(".mypanel").html(text);
