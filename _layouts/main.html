@@ -2,24 +2,10 @@
 	<title>{{ page.title }} | AssignmentLogger</title>
 	
 	<meta property="og:title" content="{{ page.title }} | AssignmentLogger">
-	<meta property="og:description" content="{{ page.title }} | AssignmentLogger">
-	
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<meta property="og:description" content="{{ page.title }} | AssignmentLogger">	
 </head>
 
 <body style='background-color:#ffffff'>
-<div class="mypanel"></div>
-
-    <script>
-    $.getJSON('http://jmshw.rf.gd/d/index', function(data) {
-        
-	var a = `{{ page.title }}`
-        var text = `${data.test}`
-                    
-        
-        $(".mypanel").html(text);
-    });
-    </script>
 	<div style='height:15%;text-align:center;'>
 		<div style='height:10%;'>
  	   	<h1>{{ page.title }}</h1>
