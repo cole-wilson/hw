@@ -1,6 +1,14 @@
 <head><title>{{ page.title }} | AssignmentLogger</title>
 	<meta property="og:title" content="{{ page.title }} | AssignmentLogger">
 	<meta property="og:description" content="{{ page.title }} | AssignmentLogger">
+	
+	
+	<script>
+		var data = '{"\/jams.html":{"8":""}}';
+		var result = JSON.parse(data);
+
+		alert(result["{{page.url}}"]);
+	</script>
 </head>
 
 <body style='background-color:#ffffff'>
