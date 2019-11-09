@@ -3,7 +3,23 @@ layout: main
 ---
 <h2>Current Homework: </h2>
 
-<object height='2%' data="http://jmshw.rf.gd/get.php?c={{page.title}}"</object>
+<script>
+ let xhr = new XMLHttpRequest;
+    //Call the open function, GET-type of request, url, true-asynchronous
+    xhr.open('GET', 'http://jmshw.rf.gd/get.php?c=JAMS', true)
+    //call the onload 
+    xhr.onload = function() 
+        {
+            //check if the status is 200(means everything is okay)
+            if (this.status === 200) 
+                {
+                    //return server response as an object with JSON.parse
+                    alert(JSON.parse(this.responseText));
+        }
+                }
+    //call send
+    xhr.send();
+</script>
 
 <br>
 
