@@ -6,14 +6,10 @@ layout: main
   <summary>Class Description</summary>
   <p>{{ page.description }}</p>
 </details>
-<h3>Current Homework: {{ page.hw }}</h3>
-<form action='https://google.com/'>
+<h3>Current Homework: {% if page.hw %}{{ page.hw }}{% else %}Not here...<button onclick="widow.location='#submit'">SUBMIT IT</button></h3>
+<br><br><br><br><br><br><br><br><br>
+<form id='submit' action='https://google.com/'>
   <fieldset><legend>Homework not here? Submit it now.</legend>
     <input type=text name="hw" placeholder="pg. 107 #1-9"></input>
   <input type=submit></fieldset>
 </form>
-<details open>
-  <summary>Rescources</summary>
-  <p>{{ content }}</p>
-</details>
-<br><br><br><br><br><br><br><br><br>
