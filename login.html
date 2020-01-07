@@ -8,8 +8,8 @@ permalink: /login
     if (parts.length == 2) return parts.pop().split(";").shift();
   }
   function setName() {
-    var a = prompt('What is your full name?');
+    var a = document.getElementById('uname');
     document.cookie = "username="+a;
   }
 </script>
-<input type=text id='name'></input><button onclick='setName()'>Set Your Name</button>
+<input type=text id='uname'></input><button onclick='setName()'>Set Your Name</button>
