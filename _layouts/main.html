@@ -14,6 +14,7 @@
 		{% for x in site.data.classes %}
 		<button onclick="window.location='{{ x.short }}.html'">{{ x.title }}</a>
 		{% endfor %}
+		<button onclick="window.location='login'">Account</button>
 	</div>
 	{% if page.home %}
 	{% include home.html %}
