@@ -11,9 +11,9 @@
 <body style='background-color:#1c3d54;text-align:center;'>
 	<div id="class-menu">
 		<button onclick="window.location='/hw'">Home</a>
-		<button onclick="window.location='jams.html'">JAMS</a>
-		<button onclick="window.location='alg.html'">Algebra</a>
-		<button onclick="window.location='geo.html'">Geometry</a>
+		{% for x in site.data.classes %}
+		<button onclick="window.location='{{ x.short }}.html'">{{ x.title }}</a>
+		{% endfor %}
 	</div>
 	{% if page.home %}
 	{% include home.html %}
@@ -24,6 +24,10 @@
 		<hr><small>Cole Wilson &copy; 2020</small>
 	</footer>
 </body>
-<!-- Created by Cole B. Wilson
+<!-- 
+
+Created by Cole B. Wilson
+
 If you are looking at this, come help develop!
+
 -->
