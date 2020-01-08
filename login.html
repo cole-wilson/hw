@@ -24,9 +24,8 @@ title: Account
 <input type=text id='fname' placeholder='First Name'><input type=text id='lname' placeholder='Last Name'></input>
 
 {% for i in (1..6) %}
-Period {{ i }}:
 <select>
-  <option>Select class</option>
+  <option>Select class for period {{ i }}</option>
   <optgroup label="6th Grade:">
   {% for x in site.data.classes %}
   {% if x.grade == 6 %}
