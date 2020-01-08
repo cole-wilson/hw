@@ -3,4 +3,26 @@ layout: main
 title: My Classes
 permalink: /classes
 ---
-hi.............
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function gO() {
+  var cont = document.getElementById("main");
+  cont.innerHTML = getCookie("name");
+}
+</script>
+<button onclick="gO()">Load your classes</button>
+<p id="main"></p>
