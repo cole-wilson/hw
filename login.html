@@ -1,5 +1,7 @@
 ---
 permalink: /login
+default: main
+title: Account
 ---
 <script>
   function getCookie(name) {
@@ -7,9 +9,24 @@ permalink: /login
     var parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
   }
-  function setName() {
-    var a = document.getElementById('uname');
-    document.cookie = "username="+a;
+  function setCookie(id, name) {
+    var a = document.getElementById(id).value;
+    document.cookie = name+"="+a;
+  }
+  function setGo() {
+    setCookie("fname","firstname");
+    setCookie("lname","lastname");
+    window.location = "/hw/";
   }
 </script>
-<input type=text id='uname'></input><button onclick='setName()'>Set Your Name</button>
+<h2>This won't create an acount, but the website will remember you on this computer.</h2>
+<fieldset><legend>Set your preferences.</legend>
+<input type=text id='fname' placeholder='First Name'><input type=text id='lname' placeholder='Last Name'></input>
+
+<select id='drinks' multiple>
+        <option>Mojito</option>
+        <option>Water</option>
+        <option>Lemon juice</option>
+</select>
+
+<button onclick='setGo()'>Set Your Name</button>
