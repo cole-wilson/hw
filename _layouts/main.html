@@ -9,7 +9,7 @@
 	<meta property="og:description" content="{{ page.title }} | AssignmentLogger">
 	<meta property="og:image" content="https://en.wikipedia.org/wiki/File:Homework_-_vector_maths.jpg">
 </head>
-<body onload="re()" style='background-color:#1c3d54;text-align:center;'>
+<body style='background-color:#1c3d54;text-align:center;'>
 	<div id="class-menu">
 		<button onclick="window.location='/hw'">Home</a>
 		<button onclick="window.location='/hw/classes'">My Classes</a>
@@ -23,26 +23,6 @@
 	<footer>
 		<hr><small>Cole Wilson &copy; 2020</small>
 	</footer>
-	<script>
-function getCookie(cname) {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i <ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-function re() {
-  document.getElementById("name").innerHTML = "hi there";
-}
-	</script>
 </body>
 <!-- 
 
