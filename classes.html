@@ -20,9 +20,12 @@ function getCookie(cname) {
   return "";
 }
 function gO() {
+  var mes = document.getElementById("mes");
   var cont = document.getElementById("main");
-  cont.innerHTML = "Hi " + getCookie("first") + ". Here are your classes.";
+  mes.innerHTML = "Hi " + getCookie("first") + ". Here are your classes:";
+  cont.innerHTML = "<li>" + getCookie("p1") + "</li>" + "<li>" + getCookie("p2") + "</li>" + "<li>" + getCookie("p3") + "</li>" + "<li>" + getCookie("p4") + "</li>" + "<li>" + getCookie("p5") + "</li>" + "<li>" + getCookie("p6") + "</li>"  
 }
 </script>
 <button onclick="gO()">Load your classes</button>
-<p id="main"></p>
+<h1 id="mes"></h1>
+<ol id="main"></ol>
