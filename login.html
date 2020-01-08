@@ -16,7 +16,9 @@ title: Account
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
   function setGo() {
-    alert(document.getElementById("fname"));
+    var a = document.getElementById("fname").value;
+    a = a + "    jiji";
+    alert(a);   
     setCookie("first","Cole",999);
     setCookie("last","Wilson",999);
     setCookie("p1","JAMS",999);
