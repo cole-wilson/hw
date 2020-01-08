@@ -23,10 +23,28 @@ title: Account
 <fieldset><legend>Set your preferences.</legend>
 <input type=text id='fname' placeholder='First Name'><input type=text id='lname' placeholder='Last Name'></input>
 
-<select id='drinks' multiple>
-        <option>Mojito</option>
-        <option>Water</option>
-        <option>Lemon juice</option>
-</select>
+<select>
+  <optgroup label="6th Grade:">
+  {% for x in site.data.classes %}
+  {% if x.grade == 6 %}
+     {{ x.title }}
+  {% endif %}
+  {% endfor %}
+  </optgroup>
+  <optgroup label="7th Grade:">
+  {% for x in site.data.classes %}
+  {% if x.grade == 7 %}
+     {{ x.title }}
+  {% endif %}
+  {% endfor %}
+  </optgroup>
+  <optgroup label="8th Grade:">
+  {% for x in site.data.classes %}
+  {% if x.grade == 8 %}
+     {{ x.title }}
+  {% endif %}
+  {% endfor %}
+  </optgroup>
+
 
 <button onclick='setGo()'>Set Your Name</button>
