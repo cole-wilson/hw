@@ -23,28 +23,31 @@ title: Account
 <fieldset><legend>Set your preferences.</legend>
 <input type=text id='fname' placeholder='First Name'><input type=text id='lname' placeholder='Last Name'></input>
 
+{% for i in (1..6) %}
+Period {{ i }}:
 <select>
+  <option>Select class</option>
   <optgroup label="6th Grade:">
   {% for x in site.data.classes %}
   {% if x.grade == 6 %}
-     {{ x.title }}
+     <option value="{{ x.short }}">{{ x.title }}</option>
   {% endif %}
   {% endfor %}
   </optgroup>
   <optgroup label="7th Grade:">
   {% for x in site.data.classes %}
   {% if x.grade == 7 %}
-     {{ x.title }}
+    <option value="{{ x.short }}">{{ x.title }}</option>
   {% endif %}
   {% endfor %}
   </optgroup>
   <optgroup label="8th Grade:">
   {% for x in site.data.classes %}
   {% if x.grade == 8 %}
-     {{ x.title }}
+     <option value="{{ x.short }}">{{ x.title }}</option>
   {% endif %}
   {% endfor %}
   </optgroup>
-
-
+</select>
+{% endfor %}
 <button onclick='setGo()'>Set Your Name</button>
