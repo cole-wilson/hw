@@ -14,7 +14,9 @@ title: Account
     document.cookie = name+"="+a;
   }
   function setGo() {
-    alert("");                                                            
+    var fname = document.getElementById('fname');
+    window.cookie = "firstname=".concat(fname);
+    alert(fname);
   }
 </script>
 <h2>This won't create an acount, but the website will remember you on this computer.</h2>
