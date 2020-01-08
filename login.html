@@ -24,26 +24,26 @@ title: Account
 <input type=text id='fname' placeholder='First Name'><input type=text id='lname' placeholder='Last Name'></input>
 
 {% for i in (1..6) %}
-<select>
+<select id="per-{{ i }}">
   <option>Select class for period {{ i }}</option>
   <optgroup label="6th Grade:">
   {% for x in site.data.classes %}
   {% if x.grade == 6 %}
-     <option value="{{ x.short }}">{{ x.title }}</option>
+     <option value="{{ x.short }}"> - {{ x.title }}</option>
   {% endif %}
   {% endfor %}
   </optgroup>
   <optgroup label="7th Grade:">
   {% for x in site.data.classes %}
   {% if x.grade == 7 %}
-    <option value="{{ x.short }}">{{ x.title }}</option>
+    <option value="{{ x.short }}"> - {{ x.title }}</option>
   {% endif %}
   {% endfor %}
   </optgroup>
   <optgroup label="8th Grade:">
   {% for x in site.data.classes %}
   {% if x.grade == 8 %}
-     <option value="{{ x.short }}">{{ x.title }}</option>
+     <option value="{{ x.short }}"> - {{ x.title }}</option>
   {% endif %}
   {% endfor %}
   </optgroup>
