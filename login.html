@@ -9,13 +9,15 @@ title: Account
     var parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
   }
-  function setCookie(id, name) {
-    var a = document.getElementById(id).value;
-    document.cookie = name+"="+a;
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
   function setGo() {
     var fname = document.getElementById('fname').value;
-    window.cookie = "firstname=hi";
+    setCookie('name','test',999);
     alert(fname);
   }
 </script>
