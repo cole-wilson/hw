@@ -12,7 +12,8 @@
 <body style='background-color:#1c3d54;text-align:center;'>
 	<div id="class-menu">
 		<button onclick="window.location='/hw'">Home</a>
-		<button onclick="window.location='/hw/classes.html'">My Classes</a>
+		{% for x in site.data.classes %}
+		<button onclick="window.location='{{ x.short }}'">{{ x.title }}</button>
 		<button id="nameb" onload="re()" onclick="window.location='login'">Account</button>
 	</div>
 	{% if page.home %}
